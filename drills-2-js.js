@@ -96,3 +96,26 @@ function result(arr){
 
 const jamaa = anotherarray.map(result);
 console.log(jamaa);
+
+
+//======================= reduce
+let input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+function convert(input){
+    input = input.split(" ");
+    return input;
+}
+let resul = convert(input);
+console.log(resul);
+
+function check(total,item){
+        if(item.length === 3){
+            total +=" ";
+        }else{
+           let element = item.slice(-1).toUpperCase();
+            total +=element;
+        } 
+    return total;
+}
+
+const myOutput = resul.reduce(check,"");
+console.log(myOutput);
